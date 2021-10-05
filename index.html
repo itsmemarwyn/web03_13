@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <!--JSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+       <!--Bundle-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <style>
+            body{text-align: center;}
+        </style>
+    </head>
+    <body>   
+
+        <p class="h1" id="name"></p>
+        
+        <button onclick="calculate()">Click here to calculate the sum and product of 3 integers.</button>
+        <script>
+            function calculate(){
+            var input1 = prompt("First number");
+            var input1_int = parseInt(input1);
+            document.getElementById("input1").innerHTML = "First number: " + input1;
+
+            var input2 = prompt("Second number");
+            var input2_int = parseInt(input2);
+            document.getElementById("input2").innerHTML = "Second number: " + input2;
+
+            var input3 = prompt("Third number");
+            var input3_int = parseInt(input3);
+            document.getElementById("input3").innerHTML = "Third number: " + input3;
+
+            var sum = input1_int + input2_int + input3_int;
+            document.getElementById("sum").innerHTML = "Sum: " + sum;
+
+            var product = input1_int * input2_int * input3_int;
+            document.getElementById("product").innerHTML = "Product: " + product;
+            }
+        </script>
+        <p id="input1"></p>
+        <p id="input2"></p>
+        <p id="input3"></p>
+        <p id="sum"></p>
+        <p id="product"></p>
+
+        <button onclick="football()">Click here to calculate total points for a football team.</button>
+
+        <script>
+            function football(){
+            var wins = prompt("Please enter number of wins:");
+            var wins_int = parseInt(wins);
+            document.getElementById("wins").innerHTML = "Wins: " + wins;
+
+            var losses = prompt("Please enter number of losses:");
+            var losses_int = parseInt(losses);
+            document.getElementById("losses").innerHTML = "Losses: " + losses;
+
+            var draws = prompt("Please enter number of draws:");
+            var draws_int = parseInt(draws);
+            document.getElementById("draws").innerHTML = "Draws: " + draws;
+
+            var points = (3 * wins_int) + (1 * draws_int) + (0 * losses_int);
+            document.getElementById("points").innerHTML = "Total number of points: " + points;
+            }
+        </script>
+
+        <p id="wins"></p>
+        <p id="losses"></p>
+        <p id="draws"></p>
+        <p id="points"></p>
+        
+        <script src="web03_13.js" async defer></script>
+    </body>
+</html>
